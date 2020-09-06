@@ -1,9 +1,18 @@
-# port-knocker
-Port knocker with permutations of input port numbers
+# Python Port Knocker
 
-Usage: python knock.py <ip> <port1> <port2> <port3><br>
-Ex: python knock.py 192.168.209.130 1 2 3<br>
+A python port knocker that can support as many ports as needed. Just keep adding ports to the parameter.
 
-The first time I came across the idea of port knocking was during my days in the PWK labs (OSCP). Had a hard time understanding why scripts publicly available in the internet were not working until I had to see the traffic in Wireshark myself. Has to be similar with the screenshot below. 
 
-![alt text](https://github.com/nathunandwani/port-knocker/blob/master/PortSeq.png)
+
+Usage: 
+
+python3 knock3.py <IP> <PORT> <PORT><PORT>
+
+```bash
+python3 knock3.py 192.168.1.1 10 20 30 40 50
+```
+
+
+
+Converted to run with python 3
+

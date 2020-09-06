@@ -16,9 +16,7 @@ def knocking(ports):
             s.connect((host,int(port)))
             print(": Success")
         except timeout as e:
-            print(f"\rFailed to knock on port {port}: " + str(e), end="")
-            print("\rHAHA")
-        s.close()
+            print(f"\rFailed to knock on port {port}: " + str(e)) 
 
         
 
