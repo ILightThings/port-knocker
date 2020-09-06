@@ -1,5 +1,5 @@
 import sys
-from socket import socket,AF_INET,SOCK_STREAM
+from socket import socket,AF_INET,SOCK_STREAM,timeout
 
 if len(sys.argv) < 4:
     print ("Not Enough Invalid request. Needs IP and 2 or more ports")
@@ -11,8 +11,15 @@ def knocking(ports):
     for port in ports:
         s = socket(AF_INET, SOCK_STREAM)
         s.settimeout(1)
-        s.connect_ex((host,int(port)))
+        try:
+            print(f"Knocking on port {port}", end="")
+            s.connect((host,int(port)))
+            print(": Success")
+        except timeout as e:
+            print(f"\rFailed to knock on port {port}: " + str(e), end="")
+            print("\rHAHA")
         s.close()
-        print(f"Knocking on port {port}")
+
+        
 
 knocking(ports)
