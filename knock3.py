@@ -3,7 +3,7 @@ from socket import socket,AF_INET,SOCK_STREAM,timeout
 
 if len(sys.argv) < 4:
     print ("Not Enough Invalid request. Needs IP and 2 or more ports")
-    sys.exit
+    quit()
 
 host = sys.argv[1]
 ports = sys.argv[2:]
